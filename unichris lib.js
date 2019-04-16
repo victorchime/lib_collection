@@ -22,16 +22,6 @@ $(document).ready(function () {
     })
 })
 
-const courses = {};
-courses["pshychology"] = {
-    url: "pshychology.html",
-    data: [
-        {
-            Author: "SEGUN BAKARE", Title: "basics of broadcasting : A manual on radio and television techniques in nigeria.", isbn: "978-o67-039-4",
-            "Year of Publication": "2005", "Place of Publication": "palms publications", "Number of Title": "1", "Class Number": "PN 1990.83.B166", "Edition": "First Edition"
-        }
-    ]
-}
 
 var newItemCounter = 1;
 var ourList = document.getElementById("our-listItem");

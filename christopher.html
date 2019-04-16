@@ -29,7 +29,7 @@
 
     
         <div class="form">
-            <form role="search" method="get" class="search-form" action="collections.html">
+            <form role="search" class="search-form" action="javascript:;" onsubmit="loadCourse(this)"> 
                 <label>
                     <span class="screen-reader-text">Search for:</span>
                     <input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
@@ -87,7 +87,7 @@
                    0903 775 7037
     </div>
     
-
+    <script type="text/javascript" src="data.js"></script>
     <Script>
 function showDate(){
 var time = document.getElementById("time");
@@ -98,6 +98,23 @@ function clearDate(){
 var time = document.getElementById("time");
 time.innerHTML = '';
 };
+
+const loadCourse = (formObj) => {
+console.log("got here")
+const formValue = formObj.elements[0].value;
+let foundCourse = courses[formObj.elements[0].value];
+console.log(foundCourse)
+console.log(formValue)
+
+if (typeof foundCourse == 'undefined'){
+    console.log("nothing found")
+}else{
+    //ToDo: pass the foung course to course-dsiplay.html
+    window.location.ref="course-display.html"
+}
+
+} 
+
 
 </script>
 </body>
